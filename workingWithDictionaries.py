@@ -9,3 +9,9 @@ b=['Hello','Bonjour',"Bom dia","Buenos dias"]
 
 dictionary={i:j for (i,j) in zip(a,b) }
 print(dictionary)
+
+#Building 2 lists from a dictionary,one list with the keys, the other one with the values
+keys=list(dictionary.keys())
+values=list(dictionary.values())
+print("KEYS:"+ str(keys))
+print("VALUES:"+ str(values))
