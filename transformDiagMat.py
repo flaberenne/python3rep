@@ -7,7 +7,9 @@ See demo in  https://github.com/flaberenne/python3rep/transformDiagMatDemo.py
 """
 
 
-def transformDiagMat(m):
+def transformDiagMat(m,s):
+    # input m original square matrix
+    #       s  0:NE=>SW else SW =>NE
     r=[[0 for x in range(len(m))] for y in range(len(m[0]))]
     res=[[0 for x in range(len(m))] for y in range(len(m[0]))]
     i=0
@@ -15,7 +17,10 @@ def transformDiagMat(m):
     for t in range(len(m)*2):
         for v in range(t+1):
             if v<=len(m)-1 and t-v<=len(m)-1:
-                res[v][t-v]=m[i][j]
+                if s==1:
+                    res[v][t-v]=m[i][j]
+                else:
+                    res[t-v][v]=m[i][j]
                 j+=1
                 if j==5:
                     i+=1
