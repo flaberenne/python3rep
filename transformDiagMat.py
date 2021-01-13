@@ -1,6 +1,11 @@
-"""
+""
 transformDiagMat: rewrite square matrix elements on the diagonals of a new matrix
 not to be confused with matrix diagonalization
+parameters:
+    - m : square matrix
+    - s : direction for the elements writing
+        - 0 : NE from top left from bottom right
+        - 1 : SW from top right to bottom left 
 See demo in  https://github.com/flaberenne/python3rep/transformDiagMatDemo.py
 - source:https://github.com/flaberenne/python3rep/transformDiagMat.py
 - author:flaberenne
