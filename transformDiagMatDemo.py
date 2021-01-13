@@ -17,7 +17,7 @@ for matLine in a:
     
 print("\n")
 print("*************")
-print("Data on diagonal NE => SW")
+print("Data on diagonal SW => NE")
 print("*************")
 
 r=f.transformDiagMat(a,0)
@@ -27,10 +27,20 @@ for matLine in r:
 
 print("\n")
 print("*************")
-print("Data on diagonal SW => NE")
+print("Data on diagonal NE => SW")
 print("*************")
 
 r=f.transformDiagMat(a,1)
+
+for matLine in r:
+    print(*matLine)
+
+print("\n")
+print("*************")
+print("Alternate")
+print("*************")
+
+r=f.transformDiagMat(a,2)
 
 for matLine in r:
     print(*matLine)
